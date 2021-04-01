@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'KCD';
+  font-weight: 400;
+  src:
+    /* local('KCD Han Sans'), */
+    url('./fonts/KCD\ Han\ Sans-Regular.woff2') format('woff2'),
+    url('./fonts/KCD\ Han\ Sans-Regular.woff') format('woff'),
+    url('./fonts/KCD\ Han\ Sans-Regular.otf') format('opentype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* font-regular */
+@font-face {
+  font-family: 'Spoqa';
+  font-weight: 400;
+  src:
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Noto';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  border: none;
+}
+
+.m {
+  margin: 16px;
+}
+
+.p {
+  padding: 16px;
+}
+
+.kcd {
+  font-family: 'KCD';
+}
+
+.spoqa {
+  font-family: 'Spoqa';
+}
+
+.system-ui {
+  font-family: system-ui;
+}
+
+.noto {
+  font-family: 'Noto'
+}
+
+.numeric {
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+}
+
+.button {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  height: 32px;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  padding-left: 12px;
+  padding-right: 8px;
+  border-radius: 6px;
+
+  background-color: #00b1bb;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button svg {
+  height: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button .icon {
+  display: inline-block;
+  margin-left: 4px;
+  line-height: 0;
 }
